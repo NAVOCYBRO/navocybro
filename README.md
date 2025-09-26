@@ -1,5 +1,5 @@
 # 💫 About Me:
-I am make a instagram auto reels scrooler 
+I am a CTF player | Student | Cybersecurity beginner.
 
 
 ## 🌐 Socials:
