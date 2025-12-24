@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Portfolio - Antarctica Theme</title>
+    <title>Rohit - Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -163,6 +163,24 @@
             line-height: 1.6;
         }
 
+        .contact-info-hero {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-item-hero {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #a8b2d1;
+        }
+
+        .contact-item-hero i {
+            color: #64ffda;
+        }
+
         .btn {
             display: inline-block;
             padding: 0.8rem 2rem;
@@ -175,6 +193,7 @@
             transition: all 0.3s ease;
             text-decoration: none;
             box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+            margin-top: 1rem;
         }
 
         .btn:hover {
@@ -242,6 +261,176 @@
             100% { transform: rotate(360deg); }
         }
 
+        /* Recap Card Section */
+        .recap-card-section {
+            padding: 3rem 5%;
+            background: rgba(10, 25, 47, 0.7);
+            border-top: 1px solid rgba(100, 255, 218, 0.1);
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recap-card-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(100, 255, 218, 0.05), transparent);
+            z-index: 0;
+        }
+
+        .recap-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, #e6f1ff, #64ffda);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            z-index: 1;
+        }
+
+        .recap-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background: #64ffda;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .recap-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, #112240, #0a192f);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(100, 255, 218, 0.1),
+                0 0 30px rgba(100, 255, 218, 0.1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transform-style: preserve-3d;
+            animation: cardFloat 6s ease-in-out infinite;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+        }
+
+        .recap-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+            z-index: -1;
+        }
+
+        .recap-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .recap-username {
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, #64ffda, #a8b2d1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .recap-subtitle {
+            color: #8892b0;
+            font-size: 1.1rem;
+        }
+
+        .recap-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-item {
+            background: rgba(100, 255, 218, 0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(100, 255, 218, 0.3);
+            box-shadow: 0 10px 20px rgba(100, 255, 218, 0.1);
+        }
+
+        .stat-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #64ffda, #a8b2d1);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #64ffda, #a8b2d1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #a8b2d1;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .recap-footer {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .recap-footer p {
+            color: #8892b0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .tryhackme-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #64ffda;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        @keyframes cardFloat {
+            0%, 100% { transform: translateY(0) rotateX(5deg); }
+            50% { transform: translateY(-10px) rotateX(5deg); }
+        }
+
         /* Sections */
         section {
             padding: 5rem 5%;
@@ -273,7 +462,7 @@
         .about-content {
             display: flex;
             gap: 3rem;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .about-text {
@@ -317,6 +506,123 @@
             height: 100%;
             background: linear-gradient(90deg, #64ffda, #a8b2d1);
             border-radius: 4px;
+        }
+
+        /* Experience & Education Section */
+        .experience-section, .education-section {
+            margin-bottom: 3rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #64ffda;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+
+        .timeline-content {
+            background: #112240;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .timeline-content h3 {
+            color: #64ffda;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h4 {
+            color: #a8b2d1;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .timeline-content .date {
+            color: #8892b0;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: #a8b2d1;
+            line-height: 1.5;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #64ffda;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0a192f;
+            right: -21px;
+            top: 0;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -21px;
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: #112240;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
+            border-color: rgba(100, 255, 218, 0.3);
+        }
+
+        .cert-card h3 {
+            color: #64ffda;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card p {
+            color: #a8b2d1;
+            font-size: 0.9rem;
         }
 
         /* Projects Section */
@@ -529,6 +835,25 @@
             .about-content, .contact-content {
                 flex-direction: column;
             }
+            
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 70px;
+            }
+            
+            .timeline-icon {
+                left: 10px !important;
+                right: auto;
+            }
+            
+            .recap-stats {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -549,6 +874,20 @@
                 width: 240px;
                 height: 240px;
             }
+            
+            .contact-info-hero {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+            
+            .recap-card {
+                padding: 1.5rem;
+            }
+            
+            .stat-value {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -563,11 +902,13 @@
     
     <!-- Header -->
     <header>
-        <div class="logo">CyberShield</div>
+        <div class="logo">Navocybro</div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li><a href="#recap">2025 Recap</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -577,9 +918,26 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Hello, I'm Rohit </h1>
-            <p>A Cybersecurity student dedicated to protecting digital infrastructure from threats. Welcome to my Antarctica-themed portfolio where security meets the frozen frontier.</p>
-            <a href="#projects" class="btn">View My Security Projects</a>
+            <h1>Rohit Yadav</h1>
+            <p>A Cybersecurity student passionate about ethical hacking, network security, and digital forensics. Currently pursuing B.Tech in Cyber Security at STATE INSTITUTE OF ENGINEERING & TECHNOLOGY, Panchkula.</p>
+            
+            <div class="contact-info-hero">
+                <div class="contact-item-hero">
+                    <i class="fas fa-envelope"></i>
+                    <span>rohiyadav925@gmail.com</span>
+                </div>
+                <div class="contact-item-hero">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9467306544</span>
+                </div>
+                <div class="contact-item-hero">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Haryana, India</span>
+                </div>
+            </div>
+            
+            <a href="#recap" class="btn">See My 2025 Recap</a>
+            <a href="#projects" class="btn" style="margin-left: 1rem;">View My Projects</a>
         </div>
         <div class="hero-image">
             <div class="profile-container">
@@ -590,17 +948,76 @@
         </div>
     </section>
     
+    <!-- Recap Card Section -->
+    <section class="recap-card-section" id="recap">
+        <h2 class="recap-title">My 2025 Cybersecurity Journey</h2>
+        <div class="recap-card">
+            <div class="recap-header">
+                <div class="recap-username">@Navocybro</div>
+                <div class="recap-subtitle">TryHackMe 2025 Recap</div>
+            </div>
+            
+            <div class="recap-stats">
+                <div class="stat-item">
+                    <div class="stat-value">127</div>
+                    <div class="stat-label">Total Rooms Completed</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-value">62</div>
+                    <div class="stat-label">Learning Days</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-value">Penetration Testing</div>
+                    <div class="stat-label">Favorite Topic</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-value">September</div>
+                    <div class="stat-label">Busiest Month</div>
+                </div>
+            </div>
+            
+            <div class="recap-footer">
+                <p>Learn cybersecurity for free, one challenge at a time!</p>
+                <div class="tryhackme-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>TryHackMe</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- About Section -->
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>I'm a second-year Cybersecurity student at State Institute of Engineering & Techonology with a passion for ethical hacking, network security, and digital forensics. My journey in cybersecurity began when I successfully finished my first CTF game  at 18, and since then I've been dedicated to understanding and countering digital world.</p>
-                <p>When I'm not analyzing network traffic or practicing penetration testing, you can find me studying cryptography, participating in CTF competitions, or exploring the latest in threat intelligence. I believe that the best defense comes from understanding the mindset of attackers.</p>
-                <p>I'm currently seeking internship opportunities where I can apply my security skills to protect organizations from cyber threats while continuing to learn from industry professionals.</p>
+                <p>I'm a Cybersecurity student with a strong foundation in network security, ethical hacking, and digital forensics. My journey in cybersecurity began when I participated in my first CTF competition, and since then I've been dedicated to understanding and countering digital threats.</p>
+                <p>I have hands-on experience with security tools like Kali Linux, Metasploit, Burp Suite, and Nmap, and I'm proficient in programming languages including Python, Bash, C++, and SQL. I'm passionate about applying my skills to real-world security challenges.</p>
+                <p>When I'm not analyzing network traffic or practicing penetration testing, you can find me participating in CTF competitions, studying cryptography, or exploring the latest in threat intelligence. I believe that the best defense comes from understanding the mindset of attackers.</p>
             </div>
             <div class="skills">
-                <h3>My Security Skills</h3>
+                <h3>Technical Skills</h3>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Python</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Bash Scripting</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 70%"></div>
+                    </div>
+                </div>
                 <div class="skill-item">
                     <div class="skill-name">
                         <span>Network Security</span>
@@ -612,16 +1029,7 @@
                 </div>
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>Ethical Hacking</span>
-                        <span>55%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 55%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Digital Forensics</span>
+                        <span>Penetration Testing</span>
                         <span>60%</span>
                     </div>
                     <div class="skill-bar">
@@ -630,21 +1038,98 @@
                 </div>
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>Cryptography</span>
-                        <span>45%</span>
+                        <span>Digital Forensics</span>
+                        <span>55%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-level" style="width: 45%"></div>
+                        <div class="skill-level" style="width: 55%"></div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Incident Response</span>
-                        <span>45%</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience & Education Section -->
+    <section id="experience">
+        <h2 class="section-title">Experience & Education</h2>
+        
+        <div class="experience-section">
+            <h3 style="text-align: center; margin-bottom: 2rem; color: #64ffda;">Work Experience</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Cyber Security Intern</h3>
+                        <h4>Infotact Solutions</h4>
+                        <div class="date">June 2025 - August 2025</div>
+                        <p>Gained hands-on experience in cybersecurity operations, vulnerability assessment, and security monitoring. Assisted in penetration testing and security audits.</p>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 45%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="education-section">
+            <h3 style="text-align: center; margin-bottom: 2rem; color: #64ffda;">Education</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>B.Tech in Cyber Security</h3>
+                        <h4>State Institute of Engineering & Technology, Panchkula</h4>
+                        <div class="date">2024 - 2028</div>
+                        <p>Currently pursuing Bachelor of Technology in Cyber Security. Focus areas include network security, cryptography, ethical hacking, and digital forensics.</p>
                     </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h3>Senior Secondary (XII), CBSE</h3>
+                        <h4>Jawahar Navodaya Vidyalaya, Panipat, Haryana</h4>
+                        <div class="date">2024</div>
+                        <p>Percentage: 73.00%</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h3>Secondary (X), CBSE</h3>
+                        <h4>Jawahar Navodaya Vidyalaya, Panipat, Haryana</h4>
+                        <div class="date">2022</div>
+                        <p>Percentage: 85.00%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Certifications Section -->
+        <div class="certifications-section">
+            <h3 style="text-align: center; margin-bottom: 2rem; color: #64ffda;">Certifications & Trainings</h3>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <h3>Hackfinity</h3>
+                    <p>TryHackMe certification covering cybersecurity fundamentals and hands-on challenges.</p>
+                </div>
+                <div class="cert-card">
+                    <h3>Advent of Cyber 2024</h3>
+                    <p>Completed TryHackMe's annual cybersecurity advent calendar with 24 days of security challenges.</p>
+                </div>
+                <div class="cert-card">
+                    <h3>Networking Basics</h3>
+                    <p>Fundamental networking concepts and protocols essential for cybersecurity professionals.</p>
+                </div>
+                <div class="cert-card">
+                    <h3>CTF Competitions</h3>
+                    <p>Participated in multiple CTF events including Pragyan'25, TantraFiesta'25, and ComSoc HackX 2025.</p>
                 </div>
             </div>
         </div>
@@ -652,20 +1137,21 @@
     
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">Security Projects</h2>
+        <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-img">
-                    <i class="fas fa-user-secret"></i>
+                    <i class="fas fa-network-wired"></i>
                 </div>
                 <div class="project-info">
-                    <h3>FrostWall IDS</h3>
-                    <p>An intrusion detection system that monitors network traffic for suspicious activities and potential threats in real-time.</p>
+                    <h3>Network Scanner</h3>
+                    <p>A Bash script for network reconnaissance that scans for active devices, open ports, and services running on a network.</p>
                     <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Snort</span>
-                        <span class="tag">SIEM</span>
+                        <span class="tag">Bash</span>
+                        <span class="tag">Networking</span>
+                        <span class="tag">Security</span>
                     </div>
+                    <a href="https://github.com/NAVOCYBRO/Network-Scan" target="_blank" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-top: 1rem;">View on GitHub</a>
                 </div>
             </div>
             <div class="project-card">
@@ -673,12 +1159,12 @@
                     <i class="fas fa-lock"></i>
                 </div>
                 <div class="project-info">
-                    <h3>IceVault Encryption</h3>
-                    <p>A secure file encryption tool with multiple cryptographic algorithms for protecting sensitive data.</p>
+                    <h3>Encryption Tool</h3>
+                    <p>A Python-based encryption tool implementing various cryptographic algorithms for secure data transmission.</p>
                     <div class="project-tags">
-                        <span class="tag">C++</span>
-                        <span class="tag">AES</span>
-                        <span class="tag">RSA</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Cryptography</span>
+                        <span class="tag">Security</span>
                     </div>
                 </div>
             </div>
@@ -687,12 +1173,12 @@
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="project-info">
-                    <h3>Polar Forensics Toolkit</h3>
-                    <p>A digital forensics tool for analyzing storage media, recovering deleted files, and investigating cyber incidents.</p>
+                    <h3>Vulnerability Scanner</h3>
+                    <p>A basic vulnerability scanner that checks for common security weaknesses in web applications and networks.</p>
                     <div class="project-tags">
                         <span class="tag">Python</span>
-                        <span class="tag">Forensics</span>
-                        <span class="tag">Data Recovery</span>
+                        <span class="tag">Web Security</span>
+                        <span class="tag">Automation</span>
                     </div>
                 </div>
             </div>
@@ -710,17 +1196,17 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div>
-                        <h4>Encrypted Email</h4>
-                        <p>navocybro@protonmail.com</p>
+                        <h4>Email</h4>
+                        <p>rohiyadav925@gmail.com</p>
                     </div>
                 </div>
-                <!--<div class="contact-item">
+                <div class="contact-item">
                     <div class="contact-icon">
                         <i class="fas fa-phone"></i>
                     </div>
                     <div>
-                      <h4>Secure Line</h4>
-                        <p>012546879</p> -->
+                        <h4>Phone</h4>
+                        <p>+91 9467306544</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -729,12 +1215,23 @@
                     </div>
                     <div>
                         <h4>Location</h4>
-                        <p>Panchkula ,India </p>
+                        <p>Haryana, India</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div>
+                        <h4>Portfolio Links</h4>
+                        <p><a href="https://tryhackme.com/p/Navocybro" target="_blank" style="color: #64ffda;">TryHackMe</a></p>
+                        <p><a href="https://github.com/NAVOCYBRO/" target="_blank" style="color: #64ffda;">GitHub</a></p>
+                        <p><a href="https://www.linkedin.com/in/navocybro/" target="_blank" style="color: #64ffda;">LinkedIn</a></p>
                     </div>
                 </div>
             </div>
             <div class="contact-form">
-                <h3>Send Me a Secure Message</h3>
+                <h3>Send Me a Message</h3>
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -749,10 +1246,10 @@
                         <input type="text" id="subject" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Encrypted Message</label>
+                        <label for="message">Message</label>
                         <textarea id="message" class="form-control" required></textarea>
                     </div>
-                    <button type="submit" class="btn">Send Secure Message</button>
+                    <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
         </div>
@@ -761,12 +1258,20 @@
     <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="https://github.com/NAVOCYBRO" class="social-link"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/navocybro" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://x.com/Navocybro" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="https://tryhackme.com/p/Navocybro" class="social-link"><i class="fab fa-Tryhackme"></i></a>
+            <a href="https://github.com/NAVOCYBRO" target="_blank" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/navocybro" target="_blank" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://tryhackme.com/p/Navocybro" target="_blank" class="social-link" title="TryHackMe">
+                <i class="fas fa-shield-alt"></i>
+            </a>
+            <a href="mailto:rohiyadav925@gmail.com" class="social-link" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
-        <p class="copyright">&copy; 2025 Navocybro. All Rights Reserved. | Stay Secure</p>
+        <p class="copyright">&copy; 2025 Rohit Yadav (Navocybro). All Rights Reserved. | Stay Secure</p>
     </footer>
     
     <script>
@@ -937,16 +1442,36 @@
         // Form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Your secure message has been encrypted and sent! I will respond through secure channels.');
+            alert('Thank you for your message! I will get back to you soon.');
             this.reset();
         });
         
-        // Initialize effects when page loads
+        // Add glowing effect to recap card on page load
         window.addEventListener('load', () => {
             createSnowflakes();
             createIceBergs();
             createIgloos();
             createCursorTrail();
+            
+            // Add special entrance animation for recap card
+            const recapCard = document.querySelector('.recap-card');
+            if (recapCard) {
+                setTimeout(() => {
+                    recapCard.style.transition = 'all 1s ease';
+                    recapCard.style.boxShadow = 
+                        '0 20px 40px rgba(0, 0, 0, 0.3), ' +
+                        '0 0 0 1px rgba(100, 255, 218, 0.1), ' +
+                        '0 0 50px rgba(100, 255, 218, 0.3)';
+                    
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        recapCard.style.boxShadow = 
+                            '0 20px 40px rgba(0, 0, 0, 0.3), ' +
+                            '0 0 0 1px rgba(100, 255, 218, 0.1), ' +
+                            '0 0 30px rgba(100, 255, 218, 0.1)';
+                    }, 2000);
+                }, 1000);
+            }
         });
     </script>
 </body>
